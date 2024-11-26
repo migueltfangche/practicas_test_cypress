@@ -14,14 +14,14 @@ describe('Test con Studio Cypress', () => {
   it('passes', () => {
     mydata.forEach((data) => { // lee renglon a reglon de los 10 datos del json
       cy.visit('https://www.institutoweb.com.ar/test/login.html')
-      /* ==== Generated with Cypress Studio ==== */
+    
       cy.get('#tuusuario').type(data.usuario);
       cy.get('#tuclave').type(data.clave);
       cy.get('#tumail').type(data.email);
       cy.get(':nth-child(8)').click();
       cy.get('h3').should('have.text', 'Acceso correcto!');
       cy.get('#volver').click();
-      /* ==== End Cypress Studio ==== */
+     
     })
 
     
